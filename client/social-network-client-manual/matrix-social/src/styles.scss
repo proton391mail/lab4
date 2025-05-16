@@ -1,0 +1,174 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Глобальные стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #141313;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+button, .button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+input, textarea, select {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Общие классы для макета */
+.app-container {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Текстовые стили */
+.heading-large {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 56px;
+  color: #FFFFFF;
+}
+
+.heading-medium {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #FFFFFF;
+}
+
+.text-regular {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #919191;
+}
+
+.text-medium {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #FFFFFF;
+}
+
+.text-small {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5em;
+  color: #919191;
+}
+
+/* Кнопки */
+.primary-button {
+  background: linear-gradient(180deg, #808080 0%, #FCFCFC 100%);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #151515;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.secondary-button {
+  background: transparent;
+  border: 1px solid #EEEEEE;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+/* Общие элементы интерфейса */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.divider {
+  height: 1px;
+  background-color: #EAEAEA;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+/* Слайдер */
+.slider {
+  display: flex;
+  gap: 8px;
+}
+
+.slider-dot {
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+}
+
+.slider-dot.inactive {
+  opacity: 0.25;
+}

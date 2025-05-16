@@ -1,0 +1,132 @@
+<div class="sidebar">
+  <div class="user-profile">
+    <div class="avatar-container">
+      <img src="assets/figma-images/student-avatar.png" alt="User Avatar" class="avatar avatar-lg">
+    </div>
+    <h2>Student</h2>
+    <p>&#64;student</p>
+  </div>
+  
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="stat-box">
+        <p class="stat-value">6.3k</p>
+        <p class="stat-label">Followers</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-box">
+        <p class="stat-value">572</p>
+        <p class="stat-label">Post</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-box">
+        <p class="stat-value">2.5k</p>
+        <p class="stat-label">Following</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="menu-container">
+    <div class="menu-item" routerLink="/profile" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Profile</p>
+        <p class="menu-subtitle">Student</p>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="menu-item" routerLink="/notifications" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Notification</p>
+        <p class="menu-subtitle">See your recent activity</p>
+      </div>
+      <div class="notification-badge">
+        <span>35</span>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="menu-item" routerLink="/friends" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Friends</p>
+        <p class="menu-subtitle">Friendlist totals</p>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="menu-item" routerLink="/messages" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Messages</p>
+        <p class="menu-subtitle">Message your friends</p>
+      </div>
+      <div class="notification-badge small">
+        <span>2</span>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="menu-item" routerLink="/albums" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Albums</p>
+        <p class="menu-subtitle">Save or post your albums</p>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <div class="menu-item" routerLink="/followers" routerLinkActive="active">
+      <div class="menu-content">
+        <p class="menu-title">Favorites</p>
+        <p class="menu-subtitle">Friends you love</p>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="menu-container">
+    <div class="menu-item privacy">
+      <div class="menu-content">
+        <p class="menu-title">Privacy Policy</p>
+        <p class="menu-subtitle">Protect your privacy</p>
+      </div>
+      <div class="menu-icon">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1.5 1L6.5 6L1.5 11" stroke="#919191" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    
+    <button class="logout-button" (click)="logout()">
+      Log out
+    </button>
+  </div>
+</div> 

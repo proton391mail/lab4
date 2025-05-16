@@ -1,0 +1,109 @@
+<div class="login-container">
+  <div class="welcome-image">
+    <img src="assets/figma-images/login-bg.png" alt="Login Background" class="background-image">
+  </div>
+  <div class="welcome-content">
+    <h1>Matrix</h1>
+    <h2>Let's connect with each other</h2>
+    
+    <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    
+    <button class="btn-primary" (click)="navigateToSignIn()">Get started</button>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Страница приветствия -->
+  <div class="welcome-screen" *ngIf="!showLogin">
+    <div class="welcome-image">
+      <img src="assets/social-media-images/onboarding-image.png" alt="Welcome Image">
+    </div>
+    <div class="welcome-content">
+      <h1>Matrix</h1>
+      <h2>Let's connect with each other</h2>
+      <button class="btn btn-primary" (click)="getStarted()">Get started</button>
+      <div class="slider">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Страница входа -->
+  <div class="login-screen" *ngIf="showLogin">
+    <div class="back-button" (click)="showLogin = false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="login-header">
+      <h1>Hello Again!</h1>
+      <p>Sign in to your account</p>
+    </div>
+
+    <form class="login-form" (ngSubmit)="login()">
+      <div class="input-group">
+        <label for="email">Email address</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          [(ngModel)]="email" 
+          placeholder="info@yourmail.com" 
+          required
+        >
+      </div>
+
+      <div class="input-group">
+        <label for="password">Enter your password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          [(ngModel)]="password" 
+          placeholder="Enter your password" 
+          required
+        >
+      </div>
+
+      <p class="forgot-password">Forgot your password?</p>
+
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+    <div class="social-login">
+      <div class="divider-text">
+        <span class="line"></span>
+        <span class="text">Or with</span>
+        <span class="line"></span>
+      </div>
+
+      <button class="btn btn-secondary" (click)="loginWithGoogle()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 10.2V13.9H17.1C16.8 15.3 15.8 16.4 14.3 17.1V19.3H17.7C19.7 17.5 21 15 21 12C21 11.3 20.9 10.7 20.8 10.2H12Z" fill="#4285F4"/>
+          <path d="M12 21C14.7 21 17 20.1 18.7 18.6L15.3 16.4C14.5 17 13.4 17.3 12 17.3C9.4 17.3 7.2 15.5 6.5 13.2H3V15.5C4.7 18.8 8.1 21 12 21Z" fill="#34A853"/>
+          <path d="M6.5 13.2C6.2 12.5 6 11.8 6 11C6 10.2 6.2 9.5 6.5 8.8V6.5H3C2.4 7.9 2 9.4 2 11C2 12.6 2.4 14.1 3 15.5L6.5 13.2Z" fill="#FBBC05"/>
+          <path d="M12 4.7C13.4 4.7 14.6 5.2 15.5 6L18.5 3C16.8 1.5 14.5 0.6 12 0.6C8.1 0.6 4.7 2.8 3 6.2L6.5 8.5C7.2 6.2 9.4 4.7 12 4.7Z" fill="#EA4335"/>
+        </svg>
+        <span>Sign in with Google</span>
+      </button>
+
+      <button class="btn btn-secondary" (click)="loginWithTwitter()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M22 5.8C21.2 6.1 20.4 6.3 19.5 6.4C20.4 5.9 21.1 5 21.4 4C20.6 4.5 19.7 4.8 18.8 5C18 4.1 16.9 3.5 15.7 3.5C13.5 3.5 11.6 5.3 11.6 7.6C11.6 7.9 11.6 8.2 11.7 8.5C8.3 8.3 5.3 6.7 3.3 4.2C3 4.8 2.8 5.4 2.8 6.1C2.8 7.4 3.5 8.5 4.5 9.1C3.8 9.1 3.2 8.9 2.6 8.6V8.7C2.6 10.7 4 12.3 5.9 12.7C5.6 12.8 5.2 12.8 4.9 12.8C4.6 12.8 4.4 12.8 4.1 12.7C4.6 14.3 6.1 15.5 7.9 15.5C6.5 16.6 4.7 17.2 2.8 17.2C2.5 17.2 2.3 17.2 2 17.1C3.8 18.3 5.9 19 8.1 19C15.7 19 19.9 12.8 19.9 7.5C19.9 7.3 19.9 7.1 19.9 7C20.7 6.4 21.4 5.7 22 4.9V5.8Z" fill="#1DA1F2"/>
+        </svg>
+        <span>Sign in with Twitter</span>
+      </button>
+    </div>
+
+    <div class="signup-link">
+      <p>Don't have account? Let's <span (click)="goToSignUp()">Sign up</span></p>
+    </div>
+  </div>
+</div> 

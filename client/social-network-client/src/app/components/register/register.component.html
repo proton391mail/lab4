@@ -1,0 +1,70 @@
+<div class="register-container">
+  <div class="register-header">
+    <div class="back-button" (click)="navigateBack()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"></path>
+        <path d="M12 19l-7-7 7-7"></path>
+      </svg>
+    </div>
+    
+    <h1 class="title">Hello Again!</h1>
+    <p class="subtitle">Sign in to your account</p>
+  </div>
+  
+  <div class="form-container">
+    <div class="input-group">
+      <label for="email">Email address</label>
+      <input 
+        type="email" 
+        id="email" 
+        [(ngModel)]="email" 
+        placeholder="info@yourmail.com"
+        class="form-control"
+        required>
+    </div>
+    
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input 
+        type="password" 
+        id="password" 
+        [(ngModel)]="password" 
+        placeholder="Enter your password"
+        class="form-control"
+        required>
+    </div>
+    
+    <div class="forgot-password">
+      <a href="#">Forgot your password?</a>
+    </div>
+    
+    <button class="btn-sign-in" (click)="signIn()">Sign in</button>
+    
+    <div class="or-divider">
+      <span class="line"></span>
+      <span class="or-text">Or with</span>
+      <span class="line"></span>
+    </div>
+    
+    <div class="social-buttons">
+      <button class="social-btn google-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17.06 16.22C16.04 17.62 14.5 18.5 12.76 18.5C10.57 18.5 8.7 17.18 7.9 15.28C7.5 14.38 7.3 13.4 7.3 12.36C7.3 11.32 7.5 10.32 7.9 9.44C8.7 7.54 10.57 6.22 12.76 6.22C14.5 6.22 16.04 7.1 17.06 8.5L15.18 10.12C14.5 9.22 13.7 8.74 12.76 8.74C11.54 8.74 10.46 9.54 10.08 10.68C9.9 11.12 9.8 11.72 9.8 12.36C9.8 13 9.9 13.62 10.08 14.04C10.46 15.18 11.54 15.98 12.76 15.98C13.7 15.98 14.5 15.5 15.18 14.62L17.06 16.22Z" fill="#000000"/>
+        </svg>
+        <span>Sign in with Google</span>
+      </button>
+      
+      <button class="social-btn twitter-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M22 4.01C21.36 4.35 20.6 4.58 19.86 4.68C20.66 4.23 21.22 3.49 21.5 2.62C20.76 3.06 19.96 3.35 19.16 3.54C18.31 2.8 17.13 2.42 15.92 2.42C13.54 2.42 11.65 4.31 11.65 6.69C11.65 7.01 11.68 7.31 11.76 7.6C8.26 7.44 5.11 5.76 3.01 3.24C2.63 3.83 2.43 4.5 2.43 5.22C2.43 6.55 3.17 7.74 4.24 8.43C3.55 8.43 2.89 8.23 2.29 7.93V7.95C2.29 10 3.75 11.7 5.72 12.05C5.16 12.22 4.55 12.24 3.96 12.12C4.51 13.79 6.07 15 7.9 15.03C6.45 16.15 4.62 16.82 2.65 16.82C2.3 16.82 1.94 16.79 1.6 16.75C3.45 17.95 5.7 18.65 8.1 18.65C15.92 18.65 20.22 12.16 20.22 6.54C20.22 6.36 20.22 6.2 20.21 6.03C21 5.5 21.61 4.84 22.1 4.09L22 4.01Z" fill="#000000"/>
+        </svg>
+        <span>Sign in with Twitter</span>
+      </button>
+    </div>
+    
+    <div class="signup-link">
+      <span>Don't have account? Let's </span>
+      <a href="#" (click)="goToSignUp($event)">Sign up</a>
+    </div>
+  </div>
+</div> 

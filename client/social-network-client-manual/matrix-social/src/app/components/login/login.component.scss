@@ -1,0 +1,134 @@
+.vector-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ECECEC;
+  box-shadow: 0px 4px 14px rgba(40, 205, 86, 0.19);
+}
+
+.login-form {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.heading-large {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.account-text {
+  opacity: 0.67;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.field-label {
+  margin-bottom: 8px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #5A5A5A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-field {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #EEEEEE;
+  border-radius: 8px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.forgot-password {
+  text-align: right;
+  background: linear-gradient(180deg, #FFFFFF 0%, #5A5A5A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+}
+
+.sign-in-btn {
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.or-with {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.or-with p {
+  margin: 0 15px;
+  color: #818181;
+}
+
+.or-with .divider {
+  flex: 1;
+  height: 1px;
+  background-color: #DDDDDD;
+  opacity: 0.5;
+}
+
+.social-btn {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-btn svg {
+  margin-right: 8px;
+}
+
+.sign-up {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sign-up-btn {
+  background: linear-gradient(180deg, #FBFFFC 0%, #919191 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+}

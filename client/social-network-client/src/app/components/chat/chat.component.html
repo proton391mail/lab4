@@ -1,0 +1,65 @@
+<div class="chat-container">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-inner">
+      <button class="back-button" routerLink="/messages">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5" stroke="#ECECEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 19L5 12L12 5" stroke="#ECECEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      
+      <div class="contact-info">
+        <h2 class="contact-name">{{ contact.name }}</h2>
+        <p class="contact-status">Last active: {{ contact.lastActive }}</p>
+      </div>
+      
+      <button class="call-button" (click)="makeVoiceCall()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4741 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4018C21.1468 21.5901 20.9046 21.7335 20.6407 21.8228C20.3769 21.912 20.0974 21.9452 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77383 17.3147 6.72534 15.2662 5.19 12.85C3.49998 10.2412 2.44824 7.271 2.12 4.18001C2.09501 3.90301 2.12788 3.62413 2.21656 3.36058C2.30523 3.09702 2.44792 2.85513 2.63536 2.65031C2.82279 2.44548 3.05122 2.28222 3.30584 2.17088C3.56046 2.05954 3.83575 2.00249 4.11 2.00001H7.11C7.59531 1.99523 8.06579 2.16708 8.43376 2.48354C8.80173 2.79999 9.04208 3.23945 9.11 3.72001C9.23662 4.68007 9.47145 5.62273 9.81 6.53001C9.94455 6.88793 9.97366 7.27692 9.89391 7.65089C9.81415 8.02485 9.62886 8.36812 9.36 8.64001L8.09 9.91001C9.51356 12.4136 11.5865 14.4865 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9752 14.1859 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="#ECECEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      
+      <div class="online-status" *ngIf="contact.isOnline"></div>
+    </div>
+    <div class="divider"></div>
+  </div>
+  
+  <!-- Chat Messages -->
+  <div class="messages-container">
+    <div class="message-group" *ngFor="let message of messages">
+      <div class="message" [ngClass]="{'owner-message': message.isOwner, 'friend-message': !message.isOwner}">
+        <div class="message-content">
+          <p class="message-text">{{ message.text }}</p>
+          <span class="message-time" *ngIf="message.time">{{ message.time }}</span>
+        </div>
+        <div class="avatar-container" *ngIf="!message.isOwner">
+          <img [src]="contact.avatar" [alt]="contact.name" class="avatar">
+        </div>
+        <div class="avatar-container owner-avatar" *ngIf="message.isOwner">
+          <img src="assets/images/profile-avatar.svg" alt="You" class="avatar">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Message Input -->
+  <div class="message-input-container">
+    <div class="divider"></div>
+    <div class="input-wrapper">
+      <input 
+        type="text"
+        class="message-input"
+        placeholder="Say something"
+        [(ngModel)]="newMessage"
+        (keyup.enter)="sendMessage()"
+      >
+      <button class="send-button" (click)="sendMessage()" [disabled]="!newMessage.trim()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,139 @@
+.login-container {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000000;
+}
+
+.vector-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-text {
+  position: absolute;
+  left: 7.73%;
+  right: 7.73%;
+  top: 57.76%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 56px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.matrix {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 24px;
+  text-align: center;
+  color: #EDEDED;
+}
+
+.wibel {
+  position: absolute;
+  left: 25.65%;
+  right: 51.6%;
+  top: 49.46%;
+}
+
+.wibel-dot-1, .wibel-dot-2, .wibel-dot-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #808080 0%, #FDFDFD 100%) 1;
+}
+
+.wibel-dot-1 {
+  top: 53.43%;
+  left: 0;
+}
+
+.wibel-dot-2 {
+  top: 51.07%;
+  right: 0;
+}
+
+.wibel-dot-3 {
+  top: 49.46%;
+  left: 20%;
+}
+
+.slider {
+  position: absolute;
+  left: 41.07%;
+  right: 41.07%;
+  top: 83.37%;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 30px;
+  height: 4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+}
+
+.dot.inactive {
+  opacity: 0.25;
+}
+
+.get-started-btn {
+  position: absolute;
+  left: 6.67%;
+  right: 6.67%;
+  top: 88.18%;
+  bottom: 4.68%;
+  background: linear-gradient(180deg, #808080 0%, #FCFCFC 100%);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.get-started-btn span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #151515;
+} 

@@ -1,0 +1,61 @@
+<div class="app-container">
+  <div class="background">
+    <img src="assets/images/vector-background.svg" alt="Background" class="vector-bg">
+  </div>
+  
+  <div class="content">
+    <div class="header">
+      <button class="back-button" (click)="goBack()">
+        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 1L1 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="login-form">
+      <h1 class="heading-large">Hello Again!</h1>
+      <p class="text-regular account-text">Sign in to your account</p>
+      
+      <div class="form-group">
+        <div class="form-field">
+          <p class="text-regular field-label">Email address</p>
+          <input type="email" [(ngModel)]="email" placeholder="info@yourmail.com" class="input-field">
+        </div>
+        
+        <div class="form-field">
+          <p class="text-regular field-label">Enter your password</p>
+          <input type="password" [(ngModel)]="password" placeholder="••••••••" class="input-field">
+        </div>
+        
+        <p class="text-regular forgot-password">Forgot your password?</p>
+      </div>
+      
+      <button class="primary-button sign-in-btn" (click)="signIn()">Sign in</button>
+      
+      <div class="or-with">
+        <div class="divider"></div>
+        <p class="text-regular">Or with</p>
+        <div class="divider"></div>
+      </div>
+      
+      <button class="secondary-button social-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0Z" fill="#4285F4"/>
+        </svg>
+        <span>Sign in with Google</span>
+      </button>
+      
+      <button class="secondary-button social-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 0C4.477 0 0 4.477 0 10C0 15.523 4.477 20 10 20C15.523 20 20 15.523 20 10C20 4.477 15.523 0 10 0Z" fill="#1DA1F2"/>
+        </svg>
+        <span>Sign in with Twitter</span>
+      </button>
+      
+      <div class="sign-up">
+        <p class="text-regular">Don't have account? Let's</p>
+        <button class="text-medium sign-up-btn" (click)="goToSignUp()">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
